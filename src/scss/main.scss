@@ -1,0 +1,11 @@
+.page {
+    &-login {
+        height: 100vh;
+
+        .el-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

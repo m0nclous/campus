@@ -13,5 +13,6 @@ import router from './router';
 app.use(router);
 
 import './scss/base.scss';
+import './scss/main.scss';
 
 app.mount('#app');
