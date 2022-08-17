@@ -19,7 +19,8 @@ module.exports = {
                 semi: true,
                 trailingComma: 'none',
                 tabWidth: 4,
-                endOfLine: 'crlf'
+                endOfLine: 'crlf',
+                printWidth: Infinity
             }
         ]
     },
