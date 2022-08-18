@@ -56,6 +56,7 @@ $footer-height: 80px;
     --el-header-height: #{$header-height};
 
     .el-row {
+        height: 100%;
         align-items: center;
     }
 
