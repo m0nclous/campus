@@ -35,7 +35,19 @@
             <router-view />
         </el-main>
 
-        <el-footer v-if="user.isAuth"></el-footer>
+        <el-footer v-if="user.isAuth">
+            <el-row>
+                <el-col :span="3">
+                    <div>Телефон:</div>
+                    <el-link href="tel:+78005503732">+7 (800) 550-37-32</el-link>
+                </el-col>
+
+                <el-col :span="3">
+                    <div>E-mail:</div>
+                    <el-link href="mailto:support@campus-agro.ru">support@campus-agro.ru</el-link>
+                </el-col>
+            </el-row>
+        </el-footer>
     </el-container>
 </template>
 
@@ -67,7 +79,28 @@ $footer-height: 80px;
 }
 
 .el-footer {
-    --el-header-height: #{$footer-height};
+    --el-footer-height: #{$footer-height};
+
+    .el-row {
+        height: 100%;
+        align-items: center;
+    }
+
+    .el-col {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 7px;
+
+        &::before {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 90px;
+            background-color: var(--el-color-success);
+            border-radius: 2px;
+        }
+    }
 }
 
 .el-main {
