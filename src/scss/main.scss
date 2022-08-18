@@ -9,3 +9,13 @@
         }
     }
 }
+
+.el-carousel {
+    &__indicators {
+        &--outside {
+            button {
+                background-color: var(--el-color-success);
+            }
+        }
+    }
+}
