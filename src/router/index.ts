@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import LoginView from '../views/LoginView.vue';
+import PlaceholderView from '../views/PlaceholderView.vue';
 
 import { useUserStore } from '@/stores/user';
 
@@ -17,6 +18,31 @@ const router = createRouter({
             path: '/login',
             name: 'login',
             component: LoginView
+        },
+        {
+            path: '/personal-area',
+            name: 'personal-area',
+            component: PlaceholderView
+        },
+        {
+            path: '/order/create',
+            name: 'order-create',
+            component: PlaceholderView
+        },
+        {
+            path: '/price',
+            name: 'price',
+            component: PlaceholderView
+        },
+        {
+            path: '/sales',
+            name: 'sales',
+            component: PlaceholderView
+        },
+        {
+            path: '/promo',
+            name: 'promo',
+            component: PlaceholderView
         }
     ]
 });

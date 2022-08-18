@@ -15,7 +15,9 @@
 
                     <el-row>
                         <el-col :span="24">
-                            <el-link>Личный кабинет</el-link>
+                            <router-link :to="{ name: 'personal-area' }" v-slot="{ href, navigate }" custom>
+                                <el-link :href="href" @click="navigate">Личный кабинет</el-link>
+                            </router-link>
                             |
                             <el-link @click="user.logout()">Выход</el-link>
                         </el-col>
@@ -23,10 +25,21 @@
                 </el-col>
 
                 <el-col :span="8" :offset="7" class="nav-links">
-                    <el-link>Новая заявка</el-link>
-                    <el-link>Прайс</el-link>
-                    <el-link>Акции</el-link>
-                    <el-link>Промо</el-link>
+                    <router-link :to="{ name: 'order-create' }" v-slot="{ href, navigate }" custom>
+                        <el-link :href="href" @click="navigate">Новая заявка</el-link>
+                    </router-link>
+
+                    <router-link :to="{ name: 'price' }" v-slot="{ href, navigate }" custom>
+                        <el-link :href="href" @click="navigate">Прайс</el-link>
+                    </router-link>
+
+                    <router-link :to="{ name: 'sales' }" v-slot="{ href, navigate }" custom>
+                        <el-link :href="href" @click="navigate">Акции</el-link>
+                    </router-link>
+
+                    <router-link :to="{ name: 'promo' }" v-slot="{ href, navigate }" custom>
+                        <el-link :href="href" @click="navigate">Промо</el-link>
+                    </router-link>
                 </el-col>
             </el-row>
         </el-header>
