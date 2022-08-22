@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import LoginView from '../views/LoginView.vue';
+import PriceList from '../views/PriceListView.vue';
 import PlaceholderView from '../views/PlaceholderView.vue';
 
 import { useUserStore } from '@/stores/user';
@@ -30,9 +31,9 @@ const router = createRouter({
             component: PlaceholderView
         },
         {
-            path: '/price',
+            path: '/price-list',
             name: 'price',
-            component: PlaceholderView
+            component: PriceList
         },
         {
             path: '/sales',
