@@ -1,5 +1,5 @@
 <template>
-    <el-container :class="`page-${$route.name}`">
+    <el-container :class="`page-${String($route.name)}`">
         <el-header v-if="user.isAuth">
             <el-row>
                 <el-col :span="3">
@@ -64,13 +64,12 @@
     </el-container>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { RouterView } from 'vue-router';
-
-import useUserStore from '@/stores/user';
-const user = useUserStore();
-
 import CampusLogo from '@/components/CampusLogo.vue';
+import useUserStore from '@/stores/user';
+
+const user = useUserStore();
 </script>
 
 <style lang="scss" scoped>
