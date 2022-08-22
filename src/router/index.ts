@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
-import LoginView from '../views/LoginView.vue';
-import PriceList from '../views/PriceListView.vue';
-import PlaceholderView from '../views/PlaceholderView.vue';
+
+const HomeView = () => import('@/views/HomeView.vue');
+const LoginView = () => import('@/views/LoginView.vue');
+const PriceListView = () => import('@/views/PriceListView.vue');
+const PlaceholderView = () => import('@/views/PlaceholderView.vue');
 
 import useUserStore from '@/stores/user';
 
@@ -33,7 +34,7 @@ const router = createRouter({
         {
             path: '/price-list',
             name: 'price',
-            component: PriceList
+            component: PriceListView
         },
         {
             path: '/sales',
