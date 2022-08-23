@@ -4,6 +4,7 @@ const HomeView = () => import('@/views/HomeView.vue');
 const LoginView = () => import('@/views/LoginView.vue');
 const PriceListView = () => import('@/views/PriceListView.vue');
 const SalesView = () => import('@/views/SalesView.vue');
+const PromoView = () => import('@/views/PromoView.vue');
 const PlaceholderView = () => import('@/views/PlaceholderView.vue');
 
 import useUserStore from '@/stores/user';
@@ -45,7 +46,7 @@ const router = createRouter({
         {
             path: '/promo',
             name: 'promo',
-            component: PlaceholderView
+            component: PromoView
         }
     ]
 });
