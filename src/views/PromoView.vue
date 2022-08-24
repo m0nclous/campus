@@ -1,6 +1,6 @@
 <template>
     <main>
-        <el-tabs v-model="activeTab" class="demo-tabs">
+        <el-tabs v-model="activeTab">
             <el-tab-pane label="Фотографии" name="photos">
                 <PhotosTab />
             </el-tab-pane>
