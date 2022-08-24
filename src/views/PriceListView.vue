@@ -11,9 +11,9 @@
 <script lang="ts" setup>
 import type { TableColumnCtx } from 'element-plus/es/components/table/src/table-column/defaults';
 import type { PriceListItem } from '@/types';
-import { currencyRUB } from '@/helpers/filters';
+import { currency } from '@/helpers/filters';
 
-const currencyFormatter = (row: PriceListItem, column: TableColumnCtx<PriceListItem>) => currencyRUB(row[column.property]);
+const currencyFormatter = (row: PriceListItem, column: TableColumnCtx<PriceListItem>) => currency(row[column.property]);
 
 const priceList: PriceListItem[] = [
     {
