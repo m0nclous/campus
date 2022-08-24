@@ -37,3 +37,16 @@ export interface CommercialOffer {
     content: string;
     PDF: PDF;
 }
+
+export interface Order {
+    id: number;
+    companyName: string;
+    city: string;
+    items: OrderItem[];
+}
+
+export interface OrderItem {
+    id: number;
+    name: string;
+    amount: number;
+}
