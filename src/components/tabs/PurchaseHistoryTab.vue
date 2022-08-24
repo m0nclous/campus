@@ -2,7 +2,7 @@
     <el-table :data="orders" :show-header="false" stripe>
         <el-table-column>
             <template #default="scope: { row: Order }">
-                <strong>#{{ id(scope.row.id) }} {{ scope.row.companyName }}</strong>
+                <strong>#{{ number(scope.row.id) }} {{ scope.row.companyName }}</strong>
                 <div v-for="item in scope.row.items" :key="item.id">{{ item.amount }} х {{ item.name }}</div>
             </template>
         </el-table-column>
@@ -10,7 +10,7 @@
         <el-table-column prop="city" width="150" align="right" />
 
         <el-table-column width="200" align="right">
-            <template>
+            <template #default="scope: { row: Order }">
                 <div>Предоплата</div>
                 <div>Документы загружены</div>
                 <div>Не оплачена</div>
@@ -19,7 +19,7 @@
         </el-table-column>
 
         <el-table-column width="200" align="right">
-            <template>
+            <template #default="scope: { row: Order }">
                 <small>15.02.2022 10:27</small>
                 <div>Отгружена</div>
                 <div>1315675406</div>
@@ -31,7 +31,7 @@
 
 <script lang="ts" setup>
 import type { Order } from '@/types';
-import { id } from '@/helpers/filters';
+import { number } from '@/helpers/filters';
 
 const orders: Order[] = [
     {

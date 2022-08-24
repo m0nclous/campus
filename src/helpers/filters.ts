@@ -5,9 +5,9 @@ export const currencyRUB = (value: number | string): string => {
     return `${value.toLocaleString()} ₽`;
 };
 
-export const id = (value: number | string): string => {
+export const number = (value: number | string, digits = 3): string => {
     value = Number(value);
     if (isNaN(value)) throw new TypeError('value is NaN');
 
-    return value < 1000 ? `00${value}`.slice(-3) : `${value}`;
+    return value.toString().split('').length < digits ? `${Array(digits).fill(0).join('')}${value}`.slice(-digits) : `${value}`;
 };
