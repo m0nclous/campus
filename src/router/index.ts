@@ -5,6 +5,7 @@ const LoginView = () => import('@/views/LoginView.vue');
 const PriceListView = () => import('@/views/PriceListView.vue');
 const SalesView = () => import('@/views/SalesView.vue');
 const PromoView = () => import('@/views/PromoView.vue');
+const PersonalAreaView = () => import('@/views/PersonalAreaView.vue');
 const PlaceholderView = () => import('@/views/PlaceholderView.vue');
 
 import useUserStore from '@/stores/user';
@@ -26,7 +27,7 @@ const router = createRouter({
         {
             path: '/personal-area',
             name: 'personal-area',
-            component: PlaceholderView
+            component: PersonalAreaView
         },
         {
             path: '/order/create',
